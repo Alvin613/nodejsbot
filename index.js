@@ -62,7 +62,7 @@ client.on("message", (message) => {
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("총 작자임", "더 없음")
       .addField("ㅅㄱ", "ㅂㅂ", true)
-      .addField("", "", true)
+      .addField("ㅁㄹ", "", true)
       .addField("", "", true)
       .addField("", "")
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
