@@ -169,4 +169,4 @@ function changeCommandStringLength(str, limitLen = 8) {
   return tmp
 }
 
-client.login(token)
+client.login(token)})
