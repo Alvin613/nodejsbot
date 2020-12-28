@@ -61,7 +61,7 @@ client.on("message", (message) => {
       .setThumbnail(img)
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("총 작자임", "더 없음")
-      .addField("", "", true)
+      .addField("ㅅㄱ", "", true)
       .addField("", "", true)
       .addField("", "", true)
       .addField("", "")
