@@ -16,11 +16,6 @@ const Discord = require("discord.js")
 const intent_list = new Discord.Intents(["GUILD_MEMBERS", "GUILD_MESSAGES", "GUILDS", "GUILD_INVITES"])
 const client = new Discord.Client({ ws: { intents: intent_list } })
 const token = process.argv.length == 2 ? process.env.token : "" // heroku를 사용하지 않을꺼라면 const token = "디스코드 봇 토큰" 으로 바꿔주세요.
-const welcomeChannelName = "안녕하세요" // 입장 시 환영메시지를 전송 할 채널의 이름을 입력하세요.
-const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
-const welcomeChannelComment = "어서오세요." // 입장 시 전송할 환영메시지의 내용을 입력하세요.
-const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
-const roleName = "게스트" // 입장 시 지급 할 역할의 이름을 적어주세요.
 
 client.on("ready", () => {
   console.log("켰다.")
@@ -50,22 +45,22 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == "embed") {
+  if (message.content == "블루문") {
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     let embed = new Discord.MessageEmbed()
-      .setTitle("타이틀")
+      .setTitle("블루문")
       .setURL("http://www.naver.com")
-      .setAuthor("나긋해", img, "http://www.naver.com")
+      .setAuthor("블루문", img, "http://www.naver.com")
       .setThumbnail(img)
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("Inline field title", "Some value here")
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
+      .addField("총 작자임", "더 없음")
+      .addField("", "", true)
+      .addField("", "", true)
+      .addField("", "", true)
+      .addField("", "")
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setTimestamp()
-      .setFooter("나긋해가 만듬", img)
+      .setFooter("wind", img)
 
     message.channel.send(embed)
   } else if (message.content == "embed2") {
@@ -77,7 +72,7 @@ client.on("message", (message) => {
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 콜라곰 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of chung wol BOT", helpImg).setColor("#186de6").setFooter(`chug wol bot`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -118,7 +113,7 @@ client.on("message", (message) => {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return
     } else if (!isNum) {
-      // c @나긋해 3
+      // c @wind 3
       if (message.content.split("<@").length == 2) {
         if (isNaN(message.content.split(" ")[2])) return
 
