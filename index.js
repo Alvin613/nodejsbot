@@ -45,12 +45,12 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == "blue") {
-    let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
+  if (message.content == "embed") {
+    let img = ""
     let embed = new Discord.MessageEmbed()
       .setTitle("블루문")
-      .setURL("http://www.naver.com")
-      .setAuthor("블루문", img, "http://www.naver.com")
+      .setURL("")
+      .setAuthor("블루문", img, "")
       .setThumbnail(img)
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .addField("총 작자임", "더 없음")
