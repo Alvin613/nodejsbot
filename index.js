@@ -43,31 +43,24 @@ client.on("message", (message) => {
 
   if (message.content == "ping") {
     return message.reply("pong")
-
-
-  }client.on("message", (message) => {
-    if (message.author.bot) return
-  
-    if (message.content == "블루문") {
-      return message.reply("이스터에그")
-    }
+  }
 
   if (message.content == "embed") {
-    let img = ""
+    let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     let embed = new Discord.MessageEmbed()
-      .setTitle("블루문")
-      .setURL("")
-      .setAuthor("블루문", img, "")
+      .setTitle("타이틀")
+      .setURL("http://www.naver.com")
+      .setAuthor("나긋해", img, "http://www.naver.com")
       .setThumbnail(img)
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("총 작자임", "더 없음")
-      .addField("ㅅㄱ", "ㅂㅂ", true)
-      .addField("ㅁㄹ", "", true)
-      .addField("", "", true)
-      .addField("", "")
+      .addField("Inline field title", "Some value here")
+      .addField("Inline field title", "Some value here", true)
+      .addField("Inline field title", "Some value here", true)
+      .addField("Inline field title", "Some value here", true)
+      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setTimestamp()
-      .setFooter("wind", img)
+      .setFooter("나긋해가 만듬", img)
 
     message.channel.send(embed)
   } else if (message.content == "embed2") {
@@ -79,7 +72,7 @@ client.on("message", (message) => {
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of chung wol BOT", helpImg).setColor("#186de6").setFooter(`chug wol bot`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of 콜라곰 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -120,7 +113,7 @@ client.on("message", (message) => {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return
     } else if (!isNum) {
-      // c @wind 3
+      // c @나긋해 3
       if (message.content.split("<@").length == 2) {
         if (isNaN(message.content.split(" ")[2])) return
 
@@ -169,4 +162,4 @@ function changeCommandStringLength(str, limitLen = 8) {
   return tmp
 }
 
-client.login(token)})
+client.login(token)
