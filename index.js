@@ -43,7 +43,14 @@ client.on("message", (message) => {
 
   if (message.content == "ping") {
     return message.reply("pong")
-  }
+
+
+  }client.on("message", (message) => {
+    if (message.author.bot) return
+  
+    if (message.content == "블루문") {
+      return message.reply("이스터에그")
+    }
 
   if (message.content == "embed") {
     let img = ""
