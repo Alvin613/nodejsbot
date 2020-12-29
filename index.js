@@ -46,21 +46,21 @@ client.on("message", (message) => {
   }
 
   if (message.content == "embed") {
-    let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
+    let img = "https://cdn.discordapp.com/attachments/792956483423305748/793451251642925089/MAb5Y1nl3BxVjtOHVtNATddiQAvpbb_KyRfSz50CinLWUO0nD-6bKWs4dCZpZnT3ZN6SfQ3djeLIz4OFyW49tkWeFFHIct7uD2f4.png"
     let embed = new Discord.MessageEmbed()
-      .setTitle("타이틀")
+      .setTitle("블루문")
       .setURL("http://www.naver.com")
-      .setAuthor("나긋해", img, "http://www.naver.com")
+      .setAuthor("블루문", img, "http://www.naver.com")
       .setThumbnail(img)
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("Inline field title", "Some value here")
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
+      .addField("총 작자", "더 없음")
+      .addField("읎다니까", "", true)
+      .addField("", "", true)
+      .addField("", "", true)
+      .addField("", "")
       ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
       .setTimestamp()
-      .setFooter("나긋해가 만듬", img)
+      .setFooter("윈드가 만듬",)
 
     message.channel.send(embed)
   } else if (message.content == "embed2") {
@@ -72,7 +72,7 @@ client.on("message", (message) => {
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 콜라곰 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("청월봇", helpImg).setColor("#186de6").setFooter(`ㅂㅂ`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
