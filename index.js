@@ -46,7 +46,7 @@ client.on("message", (message) => {
   }
 
   if (message.content == "embed") {
-    let img = "https://cdn.discordapp.com/attachments/792956483423305748/793451251642925089/MAb5Y1nl3BxVjtOHVtNATddiQAvpbb_KyRfSz50CinLWUO0nD-6bKWs4dCZpZnT3ZN6SfQ3djeLIz4OFyW49tkWeFFHIct7uD2f4.png"
+    let img = ""
     let embed = new Discord.MessageEmbed()
       .setTitle("블루문")
       .setURL("http://www.naver.com")
