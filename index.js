@@ -45,12 +45,20 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == '블루문') {
-    const embed = new Discord.MessageEmbed()
-    .setTitle('와 샌즈!')
-    message.channel.send(embed)
-    message.delete()
-}
+  if(message.content == `주사위`) {
+    const number = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+  ];
+  
+  const Response = Math.floor(Math.random() * number.length);
+  
+  message.channel.send(`${number[Response]}`)
+  }
 
   if (message.content.startsWith("!전체공지")) {
     if (checkPermission(message)) return
