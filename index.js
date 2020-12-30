@@ -45,43 +45,12 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == "embed") {
-    let img = ""
-    let embed = new Discord.MessageEmbed()
-      .setTitle("타이틀")
-      .setURL("http://www.naver.com")
-      .setAuthor("블루문", img, "http://www.naver.com")
-      .setThumbnail(img)
-      ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .addField("Inline field title", "Some value here")
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
-      ////.addBlankField()  < 해당 구문은 .addField('\u200b', '\u200b') 로 대체할 수 있습니다.
-      .setTimestamp()
-      .setFooter("블루문", img)
-
+  if (message.content == 'embed') {
+    const embed = new Discord.MessageEmbed()
+    .setTitle('와 샌즈!')
     message.channel.send(embed)
-  } else if (message.content == "embed2") {
-    let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
-    let commandList = [
-      { name: "ping", desc: "현재 핑 상태" },
-      { name: "embed", desc: "embed 예제1" },
-      { name: "embed2", desc: "embed 예제2 (help)" },
-      { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
-    ]
-    let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 콜라곰 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
-
-    commandList.forEach((x) => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
-    })
-
-    embed.addField("Commands: ", commandStr)
-
-    message.channel.send(embed)
-  }
+    message.delete()
+}
 
   if (message.content.startsWith("!전체공지")) {
     if (checkPermission(message)) return
