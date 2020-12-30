@@ -54,6 +54,10 @@ client.on("message", (message) => {
     "5",
     "6",
   ];
+
+  if(message.content == '블루문') {
+    message.channel.send('와 섽주 아시는구나')
+  }
   
   const Response = Math.floor(Math.random() * number.length);
   
