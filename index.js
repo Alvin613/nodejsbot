@@ -45,7 +45,7 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == 'embed') {
+  if (message.content == '블루문') {
     const embed = new Discord.MessageEmbed()
     .setTitle('와 샌즈!')
     message.channel.send(embed)
