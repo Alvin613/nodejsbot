@@ -87,11 +87,11 @@ client.on("message", (message) => {
       .setURL("http://www.naver.com")
       .setAuthor("블루문", img, "http://www.naver.com")
       .setThumbnail(img)
-      .addField("Inline field title", "Some value here")
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here", true)
-      .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
+      .addField("", "")
+      .addField("", "", true)
+      .addField("", "", true)
+      .addField("", "", true)
+      .addField("", " .\n..\n...\n")
       .setTimestamp()
       .setFooter("블라블라", img)
 
@@ -152,7 +152,7 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!전체공지2".length)
-      let embed = new Discord.MessageEmbed().setAuthor("공지 of 콜라곰 BOT").setColor("#186de6").setFooter(`청월봇`).setTimestamp()
+      let embed = new Discord.MessageEmbed().setAuthor("청월봇의 공지").setColor("#186de6").setFooter(`청월봇`).setTimestamp()
 
       embed.addField("공지: ", contents)
 
