@@ -85,7 +85,7 @@ client.on("message", (message) => {
     let embed = new Discord.MessageEmbed()
       .setTitle("블루문")
       .setURL("http://www.naver.com")
-      .setAuthor("블루문.", img, "http://www.naver.com")
+      .setAuthor("블루문..", img, "http://www.naver.com")
       .setThumbnail(img)
       .addField("", "")
       .addField("", "", true)
