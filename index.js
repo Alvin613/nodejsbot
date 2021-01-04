@@ -80,7 +80,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.content == "embed") {
+  if (message.content == "루문니") {
     let img = "https://cdn.discordapp.com/attachments/792956483423305748/793780604541468692/5f0c929b64314c76.png"
     let embed = new Discord.MessageEmbed()
       .setTitle("블루문")
